@@ -51,8 +51,8 @@ class DefectController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'name' => 'required',
-            'detail' => 'required',
+            'description' => 'required',
+            'priority' => 'required',
         ]);
 
         Defects::create($request->all());

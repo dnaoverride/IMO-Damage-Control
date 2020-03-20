@@ -52,7 +52,7 @@ class CenterController extends Controller
     {
         request()->validate([
             'name' => 'required',
-            'detail' => 'required',
+            'address' => 'required',
         ]);
 
         Centers::create($request->all());
@@ -69,7 +69,7 @@ class CenterController extends Controller
      */
     public function show(Centers $center)
     {
-        return view('centers.show',compact('Center'));
+        return view('centers.show',compact('center'));
     }
 
     /**

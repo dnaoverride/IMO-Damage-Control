@@ -39,6 +39,7 @@
                 <td>{{ $center->phone }}</td>
                 <td>
                     <form action="{{ route('centers.destroy',$center->id) }}" method="POST">
+                        <a class="btn btn-info" href="{{ route('defects.create',['center_id' =>$center->id]) }}">Report</a>
                         <a class="btn btn-info" href="{{ route('centers.show',$center->id) }}">Show</a>
                         @can('center-edit')
                             <a class="btn btn-primary" href="{{ route('centers.edit',$center->id) }}">Edit</a>
